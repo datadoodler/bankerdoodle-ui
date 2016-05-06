@@ -1,5 +1,8 @@
 import React, { Component, PropTypes } from 'react';
-import Header from './header';
+//import Header from './header';
+import Footer from './footer';
+import LeftSideMenu from './left-side-menu';
+import TopBar from './top-bar'
 
 class MainContainer extends Component {
     constructor() {
@@ -15,19 +18,9 @@ class MainContainer extends Component {
 
     <div id="wrapper">
 
-        <div className="topbar">
-            <div className="topbar-left">
-                ...toppar-left LOGO
-            </div>
-        </div>
+<TopBar/>
        
-        <div className="left side-menu">
-            <div className="sidebar-inner slimscrollleft">
-                <div id="sidebar-menu">
-                    sidebar menu
-                </div>
-            </div>
-        </div>
+<LeftSideMenu/>
 
         <div className="content-page">
 
@@ -35,10 +28,8 @@ class MainContainer extends Component {
                 ....content
             </div>
 
-
-            <footer className="footer">
-                2016 © Minton.
-            </footer>
+<Footer/>
+            
         </div>
 
 
