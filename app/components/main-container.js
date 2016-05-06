@@ -13,36 +13,34 @@ class MainContainer extends Component {
     }
 
     render() {
-        return ( 
-          
-
-    <div id="wrapper">
-
-<TopBar/>
-       
-<LeftSideMenu/>
-
-        <div className="content-page">
-
-            <div className="content">
-                ....content
-            </div>
-
-<Footer/>
-            
-        </div>
+        return (
 
 
+            < div id = "wrapper" >
 
-        <div className="side-bar right-bar nicescroll">
-            ... right side-bar
-        </div>
+                < TopBar / >
+
+                < LeftSideMenu / >
+
+                < div className = "content-page" >
+
+                < div className = "content" >
+                ....content < /div>
+
+                < Footer / >
+
+                < /div>
 
 
-    </div>
 
-            )
-        }
+                < div className = "side-bar right-bar nicescroll" >
+                ...right side - bar < /div>
+
+
+            < /div>
+
+        )
     }
+}
 
-    export default MainContainer;
+export default MainContainer;

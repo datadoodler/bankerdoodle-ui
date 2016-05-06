@@ -10,7 +10,7 @@ class Footer extends Component {
   render() {
     return ( 
 <footer className="footer">
-                2016 © DataDoodler.
+                2016 © Adaptive Codes
             </footer>
     	)
   }

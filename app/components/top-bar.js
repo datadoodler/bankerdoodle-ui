@@ -14,7 +14,7 @@ class TopBar extends Component {
             <div className="topbar">
                 <div className="topbar-left">
                     <div className="text-center">
-                        <a href="index.html" className="logo"><i className="md md-equalizer"></i> <span>DataDoodler</span> </a>
+                        <a href="index.html" className="logo"><i className="md md-equalizer"></i> <span>BankerDoodle</span> </a>
                     </div>
                 </div>
 
