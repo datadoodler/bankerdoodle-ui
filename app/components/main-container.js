@@ -2,14 +2,13 @@ import React, { Component, PropTypes } from 'react';
 //import Header from './header';
 import Footer from './footer';
 import LeftSideMenu from './left-side-menu';
-import TopBar from './top-bar'
+import TopBar from './top-bar/top-bar'
+import state  from '../data/initial-state'
 
 class MainContainer extends Component {
     constructor() {
         super(...arguments)
-        this.state = {
-            cards: [],
-        };
+        this.state = state;
     }
 
     render() {
@@ -20,12 +19,12 @@ class MainContainer extends Component {
 
                 < TopBar / >
 
-                < LeftSideMenu / >
+                < LeftSideMenu banks={this.state.banks}/ >
 
                 < div className = "content-page" >
 
                 < div className = "content" >
-                ....content < /div>
+                ....content {JSON.stringify(this.state.banks[0])}< /div>
 
                 < Footer / >
 
@@ -33,8 +32,6 @@ class MainContainer extends Component {
 
 
 
-                < div className = "side-bar right-bar nicescroll" >
-                ...right side - bar < /div>
 
 
             < /div>

@@ -4,7 +4,7 @@
 * Author: Coderthemes
 * Module/App: Main Js
  */
-
+/*
 (function() {
   var changeptype, debounce, dh, dw, executeFunctionByName, h, initscrolls, resizeitems, toggle_fullscreen, toggle_slimscroll, w, wow;
 
@@ -156,168 +156,169 @@
       $this.toggle_fullscreen();
     });
   }, $.FullScreen = new FullScreen, $.FullScreen.Constructor = FullScreen)(window.jQuery);
+*/
 
-  (function($) {
-    'use strict';
+//   (function($) {
+//     'use strict';
 
-    /**
-    Portlet Widget
-     */
-    var Portlet;
-    Portlet = function() {
-      this.$body = $('body');
-      this.$portletIdentifier = '.portlet';
-      this.$portletCloser = '.portlet a[data-toggle="remove"]';
-      this.$portletRefresher = '.portlet a[data-toggle="reload"]';
-    };
-    return Portlet.prototype.init = function() {
-      var $this;
-      $this = this;
-      $(document).on('click', this.$portletCloser, function(ev) {
-        var $portlet, $portlet_parent;
-        ev.preventDefault();
-        $portlet = $(this).closest($this.$portletIdentifier);
-        $portlet_parent = $portlet.parent();
-        $portlet.remove();
-        if ($portlet_parent.children().length === 0) {
-          $portlet_parent.remove();
-        }
-      });
-      $(document).on('click', this.$portletRefresher, function(ev) {
-        var $pd, $portlet;
-        ev.preventDefault();
-        $portlet = $(this).closest($this.$portletIdentifier);
-        $portlet.append('<div class="panel-disabled"><div class="loader-1"></div></div>');
-        $pd = $portlet.find('.panel-disabled');
-        setTimeout((function() {
-          $pd.fadeOut('fast', function() {
-            $pd.remove();
-          });
-        }), 500 + 300 * Math.random() * 5);
-      });
-    };
-  }, $.Portlet = new Portlet, $.Portlet.Constructor = Portlet)(window.jQuery);
+//     /**
+//     Portlet Widget
+//      */
+//     var Portlet;
+//     Portlet = function() {
+//       this.$body = $('body');
+//       this.$portletIdentifier = '.portlet';
+//       this.$portletCloser = '.portlet a[data-toggle="remove"]';
+//       this.$portletRefresher = '.portlet a[data-toggle="reload"]';
+//     };
+//     return Portlet.prototype.init = function() {
+//       var $this;
+//       $this = this;
+//       $(document).on('click', this.$portletCloser, function(ev) {
+//         var $portlet, $portlet_parent;
+//         ev.preventDefault();
+//         $portlet = $(this).closest($this.$portletIdentifier);
+//         $portlet_parent = $portlet.parent();
+//         $portlet.remove();
+//         if ($portlet_parent.children().length === 0) {
+//           $portlet_parent.remove();
+//         }
+//       });
+//       $(document).on('click', this.$portletRefresher, function(ev) {
+//         var $pd, $portlet;
+//         ev.preventDefault();
+//         $portlet = $(this).closest($this.$portletIdentifier);
+//         $portlet.append('<div class="panel-disabled"><div class="loader-1"></div></div>');
+//         $pd = $portlet.find('.panel-disabled');
+//         setTimeout((function() {
+//           $pd.fadeOut('fast', function() {
+//             $pd.remove();
+//           });
+//         }), 500 + 300 * Math.random() * 5);
+//       });
+//     };
+//   }, $.Portlet = new Portlet, $.Portlet.Constructor = Portlet)(window.jQuery);
 
-  (function($) {
-    'use strict';
-    var MoltranApp;
-    MoltranApp = function() {
-      this.VERSION = '1.1.0';
-      this.AUTHOR = 'Coderthemes';
-      this.SUPPORT = 'coderthemes@gmail.com';
-      this.pageScrollElement = 'html, body';
-      this.$body = $('body');
-    };
-    return MoltranApp.prototype.initTooltipPlugin = function() {
-      $.fn.tooltip && $('[data-toggle="tooltip"]').tooltip();
-    };
-  }, MoltranApp.prototype.initPopoverPlugin = function() {
-    $.fn.popover && $('[data-toggle="popover"]').popover();
-  }, MoltranApp.prototype.initNiceScrollPlugin = function() {
-    $.fn.niceScroll && $('.nicescroll').niceScroll({
-      cursorcolor: '#9d9ea5',
-      cursorborderradius: '0px'
-    });
-  }, MoltranApp.prototype.onDocReady = function(e) {
-    FastClick.attach(document.body);
-    resizefunc.push('initscrolls');
-    resizefunc.push('changeptype');
-    $('.animate-number').each(function() {
-      $(this).animateNumbers($(this).attr('data-value'), true, parseInt($(this).attr('data-duration')));
-    });
-    $(window).resize(debounce(resizeitems, 100));
-    $('body').trigger('resize');
-    $('.right-bar-toggle').on('click', function(e) {
-      e.preventDefault();
-      $('#wrapper').toggleClass('right-bar-enabled');
-    });
-  }, MoltranApp.prototype.init = function() {
-    var $this;
-    $this = this;
-    this.initTooltipPlugin();
-    this.initPopoverPlugin();
-    this.initNiceScrollPlugin();
-    $(document).ready($this.onDocReady);
-    $.Portlet.init();
-    $.Sidemenu.init();
-    $.FullScreen.init();
-  }, $.MoltranApp = new MoltranApp, $.MoltranApp.Constructor = MoltranApp)(window.jQuery);
+//   (function($) {
+//     'use strict';
+//     var MoltranApp;
+//     MoltranApp = function() {
+//       this.VERSION = '1.1.0';
+//       this.AUTHOR = 'Coderthemes';
+//       this.SUPPORT = 'coderthemes@gmail.com';
+//       this.pageScrollElement = 'html, body';
+//       this.$body = $('body');
+//     };
+//     return MoltranApp.prototype.initTooltipPlugin = function() {
+//       $.fn.tooltip && $('[data-toggle="tooltip"]').tooltip();
+//     };
+//   }, MoltranApp.prototype.initPopoverPlugin = function() {
+//     $.fn.popover && $('[data-toggle="popover"]').popover();
+//   }, MoltranApp.prototype.initNiceScrollPlugin = function() {
+//     $.fn.niceScroll && $('.nicescroll').niceScroll({
+//       cursorcolor: '#9d9ea5',
+//       cursorborderradius: '0px'
+//     });
+//   }, MoltranApp.prototype.onDocReady = function(e) {
+//     FastClick.attach(document.body);
+//     resizefunc.push('initscrolls');
+//     resizefunc.push('changeptype');
+//     $('.animate-number').each(function() {
+//       $(this).animateNumbers($(this).attr('data-value'), true, parseInt($(this).attr('data-duration')));
+//     });
+//     $(window).resize(debounce(resizeitems, 100));
+//     $('body').trigger('resize');
+//     $('.right-bar-toggle').on('click', function(e) {
+//       e.preventDefault();
+//       $('#wrapper').toggleClass('right-bar-enabled');
+//     });
+//   }, MoltranApp.prototype.init = function() {
+//     var $this;
+//     $this = this;
+//     this.initTooltipPlugin();
+//     this.initPopoverPlugin();
+//     this.initNiceScrollPlugin();
+//     $(document).ready($this.onDocReady);
+//     $.Portlet.init();
+//     $.Sidemenu.init();
+//     $.FullScreen.init();
+//   }, $.MoltranApp = new MoltranApp, $.MoltranApp.Constructor = MoltranApp)(window.jQuery);
 
-  (function($) {
-    'use strict';
-    $.MoltranApp.init();
-  })(window.jQuery);
+//   (function($) {
+//     'use strict';
+//     $.MoltranApp.init();
+//   })(window.jQuery);
 
 
-  /* ------------ some utility functions ----------------------- */
+//   /* ------------ some utility functions ----------------------- */
 
-  toggle_fullscreen = function() {};
+//   toggle_fullscreen = function() {};
 
-  w = void 0;
+//   w = void 0;
 
-  h = void 0;
+//   h = void 0;
 
-  dw = void 0;
+//   dw = void 0;
 
-  dh = void 0;
+//   dh = void 0;
 
-  changeptype = function() {
-    w = $(window).width();
-    h = $(window).height();
-    dw = $(document).width();
-    dh = $(document).height();
-    if (jQuery.browser.mobile === true) {
-      $('body').addClass('mobile').removeClass('fixed-left');
-    }
-    if (!$('#wrapper').hasClass('forced')) {
-      if (w > 990) {
-        $('body').removeClass('smallscreen').addClass('widescreen');
-        $('#wrapper').removeClass('enlarged');
-      } else {
-        $('body').removeClass('widescreen').addClass('smallscreen');
-        $('#wrapper').addClass('enlarged');
-        $('.left ul').removeAttr('style');
-      }
-      if ($('#wrapper').hasClass('enlarged') && $('body').hasClass('fixed-left')) {
-        $('body').removeClass('fixed-left').addClass('fixed-left-void');
-      } else if (!$('#wrapper').hasClass('enlarged') && $('body').hasClass('fixed-left-void')) {
-        $('body').removeClass('fixed-left-void').addClass('fixed-left');
-      }
-    }
-    toggle_slimscroll('.slimscrollleft');
-  };
+//   changeptype = function() {
+//     w = $(window).width();
+//     h = $(window).height();
+//     dw = $(document).width();
+//     dh = $(document).height();
+//     if (jQuery.browser.mobile === true) {
+//       $('body').addClass('mobile').removeClass('fixed-left');
+//     }
+//     if (!$('#wrapper').hasClass('forced')) {
+//       if (w > 990) {
+//         $('body').removeClass('smallscreen').addClass('widescreen');
+//         $('#wrapper').removeClass('enlarged');
+//       } else {
+//         $('body').removeClass('widescreen').addClass('smallscreen');
+//         $('#wrapper').addClass('enlarged');
+//         $('.left ul').removeAttr('style');
+//       }
+//       if ($('#wrapper').hasClass('enlarged') && $('body').hasClass('fixed-left')) {
+//         $('body').removeClass('fixed-left').addClass('fixed-left-void');
+//       } else if (!$('#wrapper').hasClass('enlarged') && $('body').hasClass('fixed-left-void')) {
+//         $('body').removeClass('fixed-left-void').addClass('fixed-left');
+//       }
+//     }
+//     toggle_slimscroll('.slimscrollleft');
+//   };
 
-  debounce = function(func, wait, immediate) {
-    var result, timeout;
-    timeout = void 0;
-    result = void 0;
-    return function() {
-      var args, callNow, context, later;
-      context = this;
-      args = arguments;
-      later = function() {
-        timeout = null;
-        if (!immediate) {
-          result = func.apply(context, args);
-        }
-      };
-      callNow = immediate && !timeout;
-      clearTimeout(timeout);
-      timeout = setTimeout(later, wait);
-      if (callNow) {
-        result = func.apply(context, args);
-      }
-      return result;
-    };
-  };
+//   debounce = function(func, wait, immediate) {
+//     var result, timeout;
+//     timeout = void 0;
+//     result = void 0;
+//     return function() {
+//       var args, callNow, context, later;
+//       context = this;
+//       args = arguments;
+//       later = function() {
+//         timeout = null;
+//         if (!immediate) {
+//           result = func.apply(context, args);
+//         }
+//       };
+//       callNow = immediate && !timeout;
+//       clearTimeout(timeout);
+//       timeout = setTimeout(later, wait);
+//       if (callNow) {
+//         result = func.apply(context, args);
+//       }
+//       return result;
+//     };
+//   };
 
-  wow = new WOW({
-    boxClass: 'wow',
-    animateClass: 'animated',
-    offset: 50,
-    mobile: false
-  });
+//   wow = new WOW({
+//     boxClass: 'wow',
+//     animateClass: 'animated',
+//     offset: 50,
+//     mobile: false
+//   });
 
-  wow.init();
+//   wow.init();
 
-}).call(this);
+// }).call(this);

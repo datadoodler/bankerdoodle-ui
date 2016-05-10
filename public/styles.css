@@ -1,0 +1,71 @@
+.step-button-container {
+    display: table-cell;
+    position: relative;
+    height: 70px;
+    vertical-align: middle;
+    padding-left: 2rem;
+    padding-right: 1rem;
+    width: 230px;
+}
+
+.step-button {
+    color: white;
+    margin-top: 0;
+    margin-bottom: 0;
+    text-align: center;
+    float: none;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.step-button-text{
+    left: 13px;
+    top: -10px;
+    position: relative;
+}
+
+.step-button-background{
+  color: rgba(255, 255, 255, 0.2);
+  font-size:55px;
+  vertical-align: baseline;
+  top:-5px;
+}
+
+.step-button-foreground{
+    color: white;
+    font-size: 45px;
+    position: relative;
+    top: -2px;
+    left: 6px;
+}
+
+.step-button-fa-container{
+  vertical-align: baseline;
+}
+
+.logo-graphic{
+    color: #3DF757 !important;
+}
+
+.topbar {
+    background-color: rgb(59, 175, 218)
+}
+
+
+.left-main-icon{
+    color: #3bafda;
+    margin-right:15px;
+}
+
+.left-main-heading{
+    text-transform: none;
+    font-size:14px;
+    font-weight: normal;
+    padding: 12px 20px!important;
+    letter-spacing: .035em;
+    pointer-events: none;
+    cursor: default;
+    color: #a2acae;
+    margin-top: 20px !important;
+    padding-left: 32px !important;
+}
