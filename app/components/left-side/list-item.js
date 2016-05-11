@@ -1,5 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import Radium, { Style } from 'radium'
+import  uuid from 'node-uuid';
 
 class ListItem extends Component {
   constructor() {
@@ -8,7 +9,9 @@ class ListItem extends Component {
 	
 
   }
-
+componentWillMount() {
+    this.id = uuid.v4();
+  }
 
 render() {
 var styles = {
@@ -41,9 +44,9 @@ var styles = {
 };
 
   	return(
-		<li key='a' className="waves-effect container list-item-container" 
+		<li key={this.id} className="waves-effect " id="list-item-container"
                    style={styles.base}>
-            <i className={this.props.selected?"md-radio-button-on list-item-radio-selected ":"md-radio-button-off list-item-radio"}></i>
+            <i className={this.props.selected?"fa fa-circle list-item-radio-selected ":"md-radio-button-off list-item-radio"}></i>
             <span style={styles.selected} className={this.props.selected?"list-item-text-selected ":"list-item-text "}>{this.props.text}</span>
         </li>
         )

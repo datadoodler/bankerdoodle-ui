@@ -1,5 +1,5 @@
 import React, { Component, PropTypes } from 'react';
-import ListItem from './left-side/list-item'
+import ListItem from './list-item'
 //import GroupHeading from './left-side/group-heading'
 ///Users/kdm/DoodleZone/bankerdoodle/bankerdoodle-ui/app/components/left-side/list-item.js
 

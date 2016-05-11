@@ -56,6 +56,20 @@
     margin-right: 15px;
 }
 
+#left-side-menu,
+#left-side-menu ul,
+#left-side-menu li,
+#left-side-menu a {
+    border: 0;
+    font-weight: normal;
+    line-height: 1.2;
+    list-style: none;
+    padding: 0;
+    position: relative;
+    text-decoration: none;
+    margin-top: 1rem;
+}
+
 .left-main-heading {
     text-transform: none;
     font-size: 14px;
@@ -65,13 +79,15 @@
     pointer-events: none;
     cursor: default;
     color: #a2acae;
-    margin-top: 20px !important;
+    margin-top: 40px !important;
     padding-left: 32px !important;
     background-color: rgb(46, 55, 58);
 }
 
-.list-item-container {
+#list-item-container {
     margin-left: 1rem;
+    font-size: 13px;
+    margin-right: 5px;
 }
 
 .list-item-text {
@@ -93,6 +109,9 @@
 
 .list-item-radio-selected {
     color: rgb(59, 175, 218);
-    width: 24px;
+    width: 14px;
     display: table-cell;
+    font-size:12px;
+    top:-2px;
+    padding-right:12px;
 }

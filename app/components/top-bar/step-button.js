@@ -17,6 +17,7 @@ class StepButton extends Component {
 	            < /span>
 	            <span class="step-button-text">
 	            { this.props.text }
+                 
 	            </span>
 	        < /span>
         )

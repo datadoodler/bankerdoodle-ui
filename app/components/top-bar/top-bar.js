@@ -1,4 +1,6 @@
 import React, { Component, PropTypes } from 'react';
+import { Link } from 'react-router';
+
 import Logo from './logo'
 import StepButton from './step-button';
 
@@ -21,15 +23,19 @@ class TopBar extends Component {
               </div>
               <div class="hidden-md hidden-sm hidden-lg">MESSAGE</div>
               <div className="step-button-container" > 
-                <StepButton stepNumber="1" text="Select a Bank"/>
+               <Link to="select-bank">
+                  <StepButton stepNumber="1" text="Select a Bank"/>
+                </Link>
               </div>
               <div className="step-button-container">
+              <Link to="create-peer-group">
                 <StepButton stepNumber="2" text="Create a Peer Group"/>
-
+                </Link>
               </div>
               <div className="step-button-container">
-                <StepButton stepNumber="3" text = "Write a Report"/>
-
+                <Link to="write-report">
+                  <StepButton stepNumber="3" text = "Write a Report"/>
+                </Link>
               </div>
 
             </div>

@@ -1,7 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 //import Header from './header';
 import Footer from './footer';
-import LeftSideMenu from './left-side-menu';
+import LeftSideMenu from './left-side/left-side-menu';
 import TopBar from './top-bar/top-bar'
 import state  from '../data/initial-state'
 
@@ -24,7 +24,10 @@ class MainContainer extends Component {
                 < div className = "content-page" >
 
                 < div className = "content" >
-                ....content {JSON.stringify(this.state.banks[0])}< /div>
+                ....content {JSON.stringify(this.state.banks)}
+                {this.props.children}
+
+                < /div>
 
                 < Footer / >
 
