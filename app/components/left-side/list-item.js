@@ -1,48 +1,53 @@
 import React, { Component, PropTypes } from 'react';
-
+import Radium, { Style } from 'radium'
 
 class ListItem extends Component {
   constructor() {
     super(...arguments)
 	this.state = { hovered:false }
-	this.onMouseOver = this.onMouseOver.bind(this)
-	this.onMouseOut = this.onMouseOut.bind(this)
-	this.style = this.style.bind(this)
+	
+
   }
 
 
+render() {
+var styles = {
+  base: {
+    
+    ':hover': {
+      color: 'rgb(189, 199, 202)'
+    },
 
-style() {
-	console.log('style',this.state)
-  if (this.state.hovered) {
-    return { backgroundColor: "red" }
-  } else {
-    return { backgroundColor: "grey" }
-  }
-}
-onMouseOver () {
-	//console.log(this.state)
-  this.state.hovered=true;
-  this.style();
-}
+    ':focus': {
+      backgroundColor: 'green'
+    },
 
-onMouseOut() {
-	//console.log('out')
-	this.state.hovered=false;
-}
+    ':active': {
+      backgroundColor: 'yellow'
+    },
+  },
+  selected:{
+  	':hover':{
+  	color: 'rgb(189, 199, 202)'
+  	}
+  },
+  block: {
+    display: 'block',
 
-
-  render() {
-
+    ':hover': {
+      boxShadow: '0 3px 0 rgba(0,0,0,0.2)'
+    }
+  },
+};
 
   	return(
-		<li className="has_sub waves-effect waves-primary" onMouseOver={this.onMouseOver} 
-                   onMouseOut={this.onMouseOut} 
-                   style={this.style()}>
-            <i className={this.props.selected?"md-radio-button-on":"md-radio-button-off"}></i>{this.props.text}
+		<li key='a' className="waves-effect container list-item-container" 
+                   style={styles.base}>
+            <i className={this.props.selected?"md-radio-button-on list-item-radio-selected ":"md-radio-button-off list-item-radio"}></i>
+            <span style={styles.selected} className={this.props.selected?"list-item-text-selected ":"list-item-text "}>{this.props.text}</span>
         </li>
         )
   }
 }
 
-export default ListItem
+export default Radium(ListItem)

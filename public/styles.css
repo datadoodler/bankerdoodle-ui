@@ -18,20 +18,20 @@
     vertical-align: middle;
 }
 
-.step-button-text{
+.step-button-text {
     left: 13px;
     top: -10px;
     position: relative;
 }
 
-.step-button-background{
-  color: rgba(255, 255, 255, 0.2);
-  font-size:55px;
-  vertical-align: baseline;
-  top:-5px;
+.step-button-background {
+    color: rgba(255, 255, 255, 0.2);
+    font-size: 55px;
+    vertical-align: baseline;
+    top: -5px;
 }
 
-.step-button-foreground{
+.step-button-foreground {
     color: white;
     font-size: 45px;
     position: relative;
@@ -39,11 +39,11 @@
     left: 6px;
 }
 
-.step-button-fa-container{
-  vertical-align: baseline;
+.step-button-fa-container {
+    vertical-align: baseline;
 }
 
-.logo-graphic{
+.logo-graphic {
     color: #3DF757 !important;
 }
 
@@ -51,15 +51,14 @@
     background-color: rgb(59, 175, 218)
 }
 
-
-.left-main-icon{
+.left-main-icon {
     color: #3bafda;
-    margin-right:15px;
+    margin-right: 15px;
 }
 
-.left-main-heading{
+.left-main-heading {
     text-transform: none;
-    font-size:14px;
+    font-size: 14px;
     font-weight: normal;
     padding: 12px 20px!important;
     letter-spacing: .035em;
@@ -68,4 +67,32 @@
     color: #a2acae;
     margin-top: 20px !important;
     padding-left: 32px !important;
+    background-color: rgb(46, 55, 58);
+}
+
+.list-item-container {
+    margin-left: 1rem;
+}
+
+.list-item-text {
+    display: table-cell;
+    margin-left: 1rem;
+    color: #a2acae;
+}
+
+.list-item-text-selected {
+    margin-left: 1rem;
+    display: table-cell;
+    color: #a2acae;
+}
+
+.list-item-radio {
+    width: 24px;
+    display: table-cell;
+}
+
+.list-item-radio-selected {
+    color: rgb(59, 175, 218);
+    width: 24px;
+    display: table-cell;
 }
