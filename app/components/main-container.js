@@ -24,7 +24,7 @@ class MainContainer extends Component {
                 < div className = "content-page" >
 
                 < div className = "content" >
-                ....content {JSON.stringify(this.state.banks)}
+               
                 {this.props.children}
 
                 < /div>

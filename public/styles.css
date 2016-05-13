@@ -43,12 +43,20 @@
     vertical-align: baseline;
 }
 
+.logo {
+    color: #62BFE1 !important;
+}
+
 .logo-graphic {
     color: #3DF757 !important;
 }
 
 .topbar {
     background-color: rgb(59, 175, 218)
+}
+
+.topbar .topbar-left {
+    height: 71px;
 }
 
 .left-main-icon {
@@ -81,7 +89,7 @@
     color: #a2acae;
     margin-top: 40px !important;
     padding-left: 32px !important;
-    background-color: rgb(46, 55, 58);
+    background: #1f2427;
 }
 
 #list-item-container {
@@ -111,7 +119,39 @@
     color: rgb(59, 175, 218);
     width: 14px;
     display: table-cell;
-    font-size:12px;
-    top:-2px;
-    padding-right:12px;
+    font-size: 12px;
+    top: -2px;
+    padding-right: 12px;
+}
+
+.bd-page-title-box {
+    background: #ffffff;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.03), 0 1px 0 rgba(0, 0, 0, 0.03);
+    padding: 20px;
+    margin: -20px -20px 22px -20px;
+}
+
+.bd-page-title {
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+.bd-page-title-box .breadcrumb {
+    margin-top: 0px;
+    padding-top: 2px;
+}
+
+h4 {
+    line-height: 22px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #505458;
+    font-family: 'Roboto', sans-serif;
+    margin: 10px 0;
 }

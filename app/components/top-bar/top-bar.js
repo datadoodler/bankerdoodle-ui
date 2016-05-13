@@ -21,7 +21,7 @@ class TopBar extends Component {
               <div className="col-md-3">
                 < Logo / >
               </div>
-              <div class="hidden-md hidden-sm hidden-lg">MESSAGE</div>
+              
               <div className="step-button-container" > 
                <Link to="select-bank">
                   <StepButton stepNumber="1" text="Select a Bank"/>

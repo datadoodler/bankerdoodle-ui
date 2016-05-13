@@ -8,8 +8,9 @@ class Welcome extends Component {
     }
 
     render() {
-        return ( < div >
-             <h1>Welcome!</h1> < /div>
+        return ( < div class="bd-page-title-box" >
+
+             <h4 class="bd-page-title">Welcome!</h4> < /div>
         )
     }
 }

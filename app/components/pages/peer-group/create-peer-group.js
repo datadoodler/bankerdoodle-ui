@@ -1,5 +1,5 @@
 import React, { Component, PropTypes } from 'react';
-
+import PageTitleBox from '../page-title-box'
 
 class CreatePeerGroup extends Component {
     constructor() {
@@ -9,7 +9,7 @@ class CreatePeerGroup extends Component {
 
     render() {
         return ( < div >
-             <h1>Create Peer Group</h1> < /div>
+             <PageTitleBox pageTitle="Create a Peer Group" /> < /div>
         )
     }
 }
