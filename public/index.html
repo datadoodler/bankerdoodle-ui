@@ -84,6 +84,9 @@
             $('.circliful-chart').circliful();
         });
 
+        $(function() {
+            $('a').tooltip({placement: 'top'});
+        });
         /* BEGIN SVG WEATHER ICON */
         if (typeof Skycons !== 'undefined') {
             var icons = new Skycons({

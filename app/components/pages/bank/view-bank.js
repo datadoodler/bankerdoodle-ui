@@ -8,7 +8,7 @@ class ViewBank extends Component {
 
     render() {
         return ( 
-        < div >
+        < div class="container">
             <PageTitleBox pageTitle="View Bank"></PageTitleBox> 
 		</div>
         )

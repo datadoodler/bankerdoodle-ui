@@ -8,7 +8,7 @@ class CreatePeerGroup extends Component {
     }
 
     render() {
-        return ( < div >
+        return ( < div class="container" >
              <PageTitleBox pageTitle="Create a Peer Group" /> < /div>
         )
     }

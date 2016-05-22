@@ -8,7 +8,7 @@ class WriteReport extends Component {
     }
 
     render() {
-        return ( < div >
+        return ( < div class="container">
               <PageTitleBox pageTitle="Write a Report" /> < /div>
         )
     }
